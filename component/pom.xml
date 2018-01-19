@@ -9,7 +9,7 @@
     <artifactId>ballerina-http-to-data</artifactId>
     <packaging>jar</packaging>
 
-    <name>ballerina-http-to-data</name>
+    <name>Ballerina Http-to-Data Connector</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>

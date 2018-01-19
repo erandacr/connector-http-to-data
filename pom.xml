@@ -5,6 +5,7 @@
     <artifactId>ballerina-http-to-data-parent</artifactId>
     <version>0.95.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <name>Ballerina Http-to-Data Connector Parent</name>
 
     <repositories>
         <repository>
