@@ -77,7 +77,7 @@ CREATE TABLE `person` (
 
 4. Use following commands to manipulate data through http interface
 
-CREATE
+##### CREATE
 ````
 curl -X POST \
   http://localhost:9090/hello/helloTable \
@@ -89,13 +89,16 @@ curl -X POST \
 }'
 ````
 
-READ
+
+##### READ
 ````
 curl -X GET \
   'http://localhost:9090/hello/helloTable?%24select=name%2Cage&%24filter=name%20eq%20'\''bob'\''%20and%20age%20eq%2028'
 ````
+unencoded url : `http://localhost:9090/hello/helloTable?$select=name,age&$filter=name eq 'bob' and age eq 28`
 
-UPDATE
+
+##### UPDATE
 ````
 curl -X PATCH \
   'http://localhost:9090/hello/helloTable?%24filter=name%20eq%20'\''bob'\''' \
@@ -104,9 +107,12 @@ curl -X PATCH \
    "age": 28
 }'
 ````
+unencoded url: `http://localhost:9090/hello/helloTable?$filter=name eq 'bob'`
 
-DELETE
+
+##### DELETE
 ````
 curl -X DELETE \
   'http://localhost:9090/hello/helloTable?%24filter=name%20eq%20'\''bob'\''%20and%20age%20eq%2022'
 ````
+unencoded url: `http://localhost:9090/hello/helloTable?$filter=name eq 'bob' and age eq 22`
